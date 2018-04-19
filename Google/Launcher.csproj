@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+    <PackageReference Include="NEST" Version="6.0.2" />
+    <PackageReference Include="SimpleInjector" Version="4.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SearchLogic\Processors.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\NewFolder\" />
+    <Folder Include="wwwroot\scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\img\arrow.png" />
+    <None Include="wwwroot\img\bg.jpg" />
+    <None Include="wwwroot\img\buttons.png" />
+    <None Include="wwwroot\img\heading.png" />
+    <None Include="wwwroot\img\icons.png" />
+    <None Include="wwwroot\img\more.png" />
+    <None Include="wwwroot\img\searchBox.png" />
+    <None Include="wwwroot\script.js" />
+    <None Include="wwwroot\styles.css" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+C:\Users\arturs.bucenieks\source\repos\Google\SearchLogic\bin\Debug\netcoreapp2.0\Processors.deps.json
+C:\Users\arturs.bucenieks\source\repos\Google\SearchLogic\bin\Debug\netcoreapp2.0\Processors.dll
+C:\Users\arturs.bucenieks\source\repos\Google\SearchLogic\bin\Debug\netcoreapp2.0\Processors.pdb
+C:\Users\arturs.bucenieks\source\repos\Google\SearchLogic\obj\Debug\netcoreapp2.0\Processors.csproj.CoreCompileInputs.cache
+C:\Users\arturs.bucenieks\source\repos\Google\SearchLogic\obj\Debug\netcoreapp2.0\Processors.AssemblyInfoInputs.cache
+C:\Users\arturs.bucenieks\source\repos\Google\SearchLogic\obj\Debug\netcoreapp2.0\Processors.AssemblyInfo.cs
+C:\Users\arturs.bucenieks\source\repos\Google\SearchLogic\obj\Debug\netcoreapp2.0\Processors.dll
+C:\Users\arturs.bucenieks\source\repos\Google\SearchLogic\obj\Debug\netcoreapp2.0\Processors.pdb
+C:\Users\arturs.bucenieks\source\repos\Google\SearchLogic\obj\Debug\netcoreapp2.0\Processors.csprojResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Launcher.deps.json
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Launcher.runtimeconfig.json
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Launcher.runtimeconfig.dev.json
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Launcher.dll
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Launcher.pdb
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Processors.dll
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Processors.pdb
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Launcher.csprojResolveAssemblyReference.cache
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Launcher.csproj.CoreCompileInputs.cache
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Launcher.AssemblyInfoInputs.cache
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Launcher.AssemblyInfo.cs
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Launcher.csproj.CopyComplete
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Launcher.dll
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Launcher.pdb

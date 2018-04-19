@@ -1,0 +1,6 @@
+C:\Users\arturs.bucenieks\source\repos\Google\ElasticSearch\bin\Debug\netcoreapp2.0\ElasticSearch.deps.json
+C:\Users\arturs.bucenieks\source\repos\Google\ElasticSearch\bin\Debug\netcoreapp2.0\ElasticSearch.dll
+C:\Users\arturs.bucenieks\source\repos\Google\ElasticSearch\obj\Debug\netcoreapp2.0\ElasticSearch.csproj.CoreCompileInputs.cache
+C:\Users\arturs.bucenieks\source\repos\Google\ElasticSearch\obj\Debug\netcoreapp2.0\ElasticSearch.AssemblyInfoInputs.cache
+C:\Users\arturs.bucenieks\source\repos\Google\ElasticSearch\obj\Debug\netcoreapp2.0\ElasticSearch.AssemblyInfo.cs
+C:\Users\arturs.bucenieks\source\repos\Google\ElasticSearch\obj\Debug\netcoreapp2.0\ElasticSearch.csprojResolveAssemblyReference.cache

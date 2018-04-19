@@ -1,0 +1,11 @@
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Google.deps.json
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Google.runtimeconfig.json
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Google.runtimeconfig.dev.json
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Google.dll
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Google.csprojResolveAssemblyReference.cache
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Google.csproj.CoreCompileInputs.cache
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Google.AssemblyInfoInputs.cache
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Google.AssemblyInfo.cs
+C:\Users\arturs.bucenieks\source\repos\Google\Google\bin\Debug\netcoreapp2.0\Google.pdb
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Google.dll
+C:\Users\arturs.bucenieks\source\repos\Google\Google\obj\Debug\netcoreapp2.0\Google.pdb
