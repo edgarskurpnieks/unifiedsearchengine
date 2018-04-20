@@ -15,12 +15,12 @@ namespace Ultimate.Search.Processors
 
         public SearchLogic()
         {
-            string indexName = $"google";
-            var connectionPool = new SingleNodeConnectionPool(new Uri("http://localhost.fiddler:9200"));
-            var settings = new ConnectionSettings(connectionPool);
-            // settings.DisableAutomaticProxyDetection(false).Proxy(new Uri("http://localhost:8888"), "", "");
-            settings.DefaultIndex(indexName);
-            _client = new ElasticClient(settings);
+            //string indexName = $"google";
+            //var connectionPool = new SingleNodeConnectionPool(new Uri("http://localhost.fiddler:9200"));
+            //var settings = new ConnectionSettings(connectionPool);
+            //// settings.DisableAutomaticProxyDetection(false).Proxy(new Uri("http://localhost:8888"), "", "");
+            //settings.DefaultIndex(indexName);
+            //_client = new ElasticClient(settings);
         }
 
         public List<Document> DoSearch(string query)
@@ -31,7 +31,7 @@ namespace Ultimate.Search.Processors
             allDocs.AddRange(ResultSets.pdfDocuments);
             allDocs.AddRange(ResultSets.caseDocuments);
             allDocs.ForEach(x => x.Data += " " + x.Name + " " + x.Title + " " + x.objectType);
-            if (string.IsNullOrWhiteSpace(query))
+            if (query == "*")
             {
                 return allDocs;
             }
