@@ -26,8 +26,11 @@ namespace Ultimate.Search.Processors
         public List<Document> DoSearch(string query)
         {
             var allDocs = new List<Document>();
+            ResultSets.caseDocuments.ForEach(x => x.DisplayType = "Case");
+            ResultSets.pdfDocuments.ForEach(x => x.DisplayType = "Document");
             allDocs.AddRange(ResultSets.pdfDocuments);
             allDocs.AddRange(ResultSets.caseDocuments);
+            allDocs.ForEach(x => x.Data += " " + x.Name + " " + x.Title + " " + x.objectType);
             return ResultSetFilter.FilterDocuments(allDocs, query);
         }
     }
