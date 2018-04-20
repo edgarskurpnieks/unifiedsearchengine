@@ -13,13 +13,6 @@
             <fieldset>
                 <input id="s" type="text" />
                 <input type="submit" value="Submit" id="submitButton" />
-                <ul class="icons">
-                    <li class="web" title="Web Search" data-searchType="web">Web</li>
-                    <li class="images" title="Image Search" data-searchType="images">Images</li>
-                    <li class="news" title="News Search" data-searchType="news">News</li>
-                    <li class="videos" title="Video Search" data-searchType="video">Videos</li>
-                </ul>
-
             </fieldset>
         </form>
         <div id="resultsDiv"></div>
@@ -27,32 +20,4 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html>
-
-@*<script>
-    function doSearch() {
-        var searchQeury = $("input.s").val();
-        if (searchQeury) {
-            var url = "http://localhost:61495/Search/DoSearch/" + searchQeury;
-
-            var request = $.ajax({
-                method: "POST",
-                url: url,
-                context: document.body,
-                success: function (data) {
-                    if (data) {
-                        var searchResultBlock = $("div.search-results");
-                        var self = this;
-                        searchResultBlock.children().remove();
-                        $.each(data, function (i, e) {
-                            searchResultBlock.append("<div>");
-                            searchResultBlock.append(e.data);
-                            searchResultBlock.append("</div>");
-                        });
-                    }
-                }
-            });
-        }
-    }
-</script>*@
 </html>
