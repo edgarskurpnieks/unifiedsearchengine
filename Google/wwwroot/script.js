@@ -90,7 +90,10 @@ $(document).ready(function(){
 				var pageContainer = $('<div>',{className:'pageContainer'});
 
 				for(var i=0;i<results.length;i++){
-                    pageContainer.append('<div class="results">' + results[i].data + '</div>');
+                    pageContainer.append('<div class="results">'
+                        + '<div class="title"><a href="#">' + results[i].title + '</a></div>'
+                        + '<div class="name">' + results[i].name + ' ' + results[i].data + '</div>'
+                        + '</div>');
 				}
 				
 				if(!settings.append){

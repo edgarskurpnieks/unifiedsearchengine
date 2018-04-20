@@ -285,3 +285,8 @@ a:hover{
     word-wrap: break-word;
     border-bottom: 1px solid #04273d;
 }
+
+.title {
+    text-decoration:underline;
+    font-size:14px;
+}
