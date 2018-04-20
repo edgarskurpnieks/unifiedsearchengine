@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using Ultimate.Search.Processors;
@@ -8,12 +9,18 @@ namespace Processors
 {
     class ResultSetFilter
     {
+        /// <summary>
+        /// Matches documents against query
+        /// </summary>
+        /// <param name="allDocs">Documents</param>
+        /// <param name="query">Query</param>
+        /// <returns></returns>
         public static List<Document> FilterDocuments(List<Document> allDocs, string query)
         {
             var result = new List<Document>();
             foreach (var doc in allDocs)
             {
-                if (MatchDocument(doc, query))
+                if (MatchDocumentData(doc, query))
                 {
                     result.Add(doc);
                 }
@@ -21,22 +28,37 @@ namespace Processors
             return result;
         }
 
-        public static bool MatchDocument(Document doc, string query)
+        private static bool MatchDocumentData(Document doc, string query)
         {
-            return MatchAll(doc.Data, query);
+            return MatchQuery(doc.Data, query);
         }
 
-        public static bool MatchAll(string data, string query)
+        private static bool MatchQuery(string data, string query)
         {
-            var terms = Regex.Split(query, "[^a-zA-Z0-9-]");
-            //var terms = query.Split(new[] { " ", ",", "" }, StringSplitOptions.RemoveEmptyEntries);
+            var terms = Regex.Split(query, "[^a-zA-Z0-9-! ]").Where(s => s != String.Empty);
             
             foreach(var term in terms)
             {
-                if (data.IndexOf(term, StringComparison.OrdinalIgnoreCase) < 0)
+                if (!MatchTerm(data, term))
                 {
                     return false;
                 }
+            }
+
+            return true;
+        }
+
+        private static bool MatchTerm(string data, string term)
+        {
+            // if preceeded by ! then must not contain
+            if(term[0] == '!')
+            {
+                return !MatchTerm(data, term.Substring(1));
+            }
+
+            if (data.IndexOf(term, StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                return false;
             }
 
             return true;
