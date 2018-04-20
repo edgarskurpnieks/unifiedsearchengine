@@ -29,7 +29,6 @@ namespace Ultimate.Search.Processors
             allDocs.AddRange(ResultSets.pdfDocuments);
             allDocs.AddRange(ResultSets.caseDocuments);
             var result = ResultSetFilter.FilterDocuments(allDocs, query);
-            return result.Select(x => new Document() { Data = x.Data, Test = x.Test }).ToList();
         }
     }
 }

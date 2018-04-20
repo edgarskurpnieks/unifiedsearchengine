@@ -12,27 +12,44 @@ namespace Processors
             new Document
             {
                 objectType = "pdf",
-                Data = "Reginald Porter seeker gun-owner"
+                Title = "Measure Request",
+                Name = "Reginald Porter",
+                Data = "seeker gun-owner"
             },
             new Document
             {
                 objectType = "pdf",
-                Data = "Abdullah Sayegh seeker military conflict"
+                Title = "External Record",
+                Name = "Abdullah Sayegh",
+                Data = "seeker military conflict"
             },
             new Document
             {
                 objectType = "pdf",
-                Data = "Naif Asghar permit ex-military"
+                Title = "Measure Request",
+                Name = "Naif Asghar",
+                Data = "permit ex-military"
             },
             new Document
             {
                 objectType = "pdf",
-                Data = "Amid Sarkis citizenship doctor"
+                Title = "External Record",
+                Name = "Amid Sarkis",
+                Data = "citizenship doctor"
             },
             new Document
             {
                 objectType = "pdf",
-                Data = "Janis Jarans citizenship teacher"
+                Title = "Measure Request",
+                Name = "Janis Jarans",
+                Data = "citizenship teacher"
+            },
+            new Document
+            {
+                objectType = "pdf",
+                Title = "Measure Request",
+                Name = "Amid Sarkis",
+                Data = "citizenship doctor"
             }
         };
 
@@ -41,17 +58,30 @@ namespace Processors
             new Document
             {
                 objectType = "case",
-                Data = "Reginald Porter "
+                Title = "Citizenship",
+                Name = "Janis Jarans",
+                Data = "citizenship teacher"
             },
             new Document
             {
                 objectType = "case",
-                Data = "Abdullah Sayegh"
+                Title = "Citizenship",
+                Name = "Abdullah Sayegh",
+                Data = "seeker military conflict"
             },
             new Document
             {
                 objectType = "case",
-                Data = "Naif Asghar"
+                Title = "Residence permit",
+                Name = "Amid Sarkis",
+                Data = "citizenship doctor"
+            },
+            new Document
+            {
+                objectType = "case",
+                Title = "Asylum",
+                Name = "Naif Asghar",
+                Data = "permit ex-military"
             }
         };
     }
