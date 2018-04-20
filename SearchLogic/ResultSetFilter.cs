@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using Ultimate.Search.Processors;
 
 namespace Processors
@@ -22,12 +23,13 @@ namespace Processors
 
         public static bool MatchDocument(Document doc, string query)
         {
-            return MatchData(doc.Data, query);
+            return MatchAll(doc.Data, query);
         }
 
-        public static bool MatchData(string data, string query)
+        public static bool MatchAll(string data, string query)
         {
-            var terms = query.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+            var terms = Regex.Split(query, "[^a-zA-Z0-9-]");
+            //var terms = query.Split(new[] { " ", ",", "" }, StringSplitOptions.RemoveEmptyEntries);
             
             foreach(var term in terms)
             {

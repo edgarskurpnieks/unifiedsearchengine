@@ -31,6 +31,11 @@ namespace Ultimate.Search.Processors
             allDocs.AddRange(ResultSets.pdfDocuments);
             allDocs.AddRange(ResultSets.caseDocuments);
             allDocs.ForEach(x => x.Data += " " + x.Name + " " + x.Title + " " + x.objectType);
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return allDocs;
+            }
+
             return ResultSetFilter.FilterDocuments(allDocs, query);
         }
     }
