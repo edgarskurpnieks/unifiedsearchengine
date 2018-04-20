@@ -28,16 +28,16 @@ namespace Processors
         public static bool MatchData(string data, string query)
         {
             var terms = query.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
-
+            
             foreach(var term in terms)
             {
-                if (data.IndexOf(term, StringComparison.OrdinalIgnoreCase) >= 0)
+                if (data.IndexOf(term, StringComparison.OrdinalIgnoreCase) < 0)
                 {
-                    return true;
+                    return false;
                 }
             }
 
-            return false;
+            return true;
         }
     }
 }
