@@ -92,7 +92,7 @@ $(document).ready(function(){
 				for(var i=0;i<results.length;i++){
                     pageContainer.append('<div class="results">'
                         + '<div class="title"><a href="#">' + results[i].title + '</a></div>'
-                        + '<div class="name">' + results[i].name + ' ' + results[i].data + '</div>'
+                        + '<div class="name">Customer: ' + results[i].name + ', Type: ' + results[i].displayType + '</div>'
                         + '</div>');
 				}
 				
