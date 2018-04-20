@@ -1,5 +1,6 @@
 ﻿using Elasticsearch.Net;
 using Nest;
+using Processors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,26 +25,11 @@ namespace Ultimate.Search.Processors
 
         public List<Document> DoSearch(string query)
         {
-            //var result = _client.Search<Document>(s => s
-            //    .Query(y => y
-            //        .MultiMatch(x => x
-            //            .Fields(p => p.Fields(l => l.Data, ls => ls.Test))
-            //            .Query(query)
-            //            )
-            //         )
-            //    .From(1)			
-            //    .Size(15));
-
-            var result = _client.Search<Document>(s => s
-               .Query(y => y
-                   .MatchAll(x => x
-                       .Name(query)
-                       )
-                    )
-               .From(1)
-               .Size(15));
-
-            return result.Documents.Select(x => new Document() { Data = x.Data, Test = x.Test }).ToList();
+            var allDocs = new List<Document>();
+            allDocs.AddRange(ResultSets.pdfDocuments);
+            allDocs.AddRange(ResultSets.caseDocuments);
+            var result = ResultSetFilter.FilterDocuments(allDocs, query);
+            return result.Select(x => new Document() { Data = x.Data, Test = x.Test }).ToList();
         }
     }
 }
