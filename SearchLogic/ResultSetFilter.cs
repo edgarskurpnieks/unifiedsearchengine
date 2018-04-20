@@ -30,14 +30,29 @@ namespace Processors
 
         private static bool MatchDocumentData(Document doc, string query)
         {
-            return MatchQuery(doc.Data, query);
+            return MatchOr(doc.Data, query);
+        }
+
+        private static bool MatchOr(string data, string query)
+        {
+            var terms = Regex.Split(query, "[,]").Where(s => s != String.Empty);
+            
+            foreach (var term in terms)
+            {
+                if (MatchQuery(data, term))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private static bool MatchQuery(string data, string query)
         {
-            var terms = Regex.Split(query, "[^a-zA-Z0-9-! ]").Where(s => s != String.Empty);
-            
-            foreach(var term in terms)
+            var terms = Regex.Split(query, "[^a-zA-Z0-9-!]").Where(s => s != String.Empty);
+
+            foreach (var term in terms)
             {
                 if (!MatchTerm(data, term))
                 {
@@ -51,7 +66,7 @@ namespace Processors
         private static bool MatchTerm(string data, string term)
         {
             // if preceeded by ! then must not contain
-            if(term[0] == '!')
+            if (term[0] == '!')
             {
                 return !MatchTerm(data, term.Substring(1));
             }
