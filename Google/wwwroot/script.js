@@ -75,6 +75,9 @@ $(document).ready(function(){
 		
 		// URL of Google's AJAX search API
         var input = $("input#s").val();
+        if (!input) {
+            return;
+        }
         var apiURL = 'http://localhost:61495/Search/DoSearch/';
         var resultsDiv = $('#resultsDiv');
         $.getJSON(apiURL,{searchQuery:input,q:settings.term,rsz:settings.perPage,start:settings.page*settings.perPage},function(r){
