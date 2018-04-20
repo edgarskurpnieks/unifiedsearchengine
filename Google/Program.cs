@@ -30,31 +30,31 @@ namespace Ultimate.Search
             container.Verify();
 
 
-            var indexSettings = new IndexSettings();
-            indexSettings.NumberOfReplicas = 1;
-            indexSettings.NumberOfShards = 1;
+            //var indexSettings = new IndexSettings();
+            //indexSettings.NumberOfReplicas = 1;
+            //indexSettings.NumberOfShards = 1;
 
-            var indexstate = new IndexState();
-            indexstate.Settings = indexSettings;
+            //var indexstate = new IndexState();
+            //indexstate.Settings = indexSettings;
 
-            var connectionPool = new SingleNodeConnectionPool(new Uri("http://localhost.fiddler:9200"));
-            var settings = new ConnectionSettings(connectionPool);
-            //settings.DisableAutomaticProxyDetection(false).Proxy(new Uri("http://localhost:8888"), "", "");
-            settings.DefaultIndex(indexName);
-            _client = new ElasticClient(settings);
+            //var connectionPool = new SingleNodeConnectionPool(new Uri("http://localhost.fiddler:9200"));
+            //var settings = new ConnectionSettings(connectionPool);
+            ////settings.DisableAutomaticProxyDetection(false).Proxy(new Uri("http://localhost:8888"), "", "");
+            //settings.DefaultIndex(indexName);
+            //_client = new ElasticClient(settings);
 
-            if (!_client.IndexExists(indexName).Exists)
-            {
-                var createIndexResponse = _client.CreateIndex(indexName, c => c
-                .InitializeUsing(indexstate)
-                .Mappings(ms => ms.Map<Document>(sm => sm
-                    .AllField(s => s
-                        .Enabled()
-                        .Analyzer("nGram_analyzer")
-                        .SearchAnalyzer("whitespace_analyzer")))));
+            //if (!_client.IndexExists(indexName).Exists)
+            //{
+            //    var createIndexResponse = _client.CreateIndex(indexName, c => c
+            //    .InitializeUsing(indexstate)
+            //    .Mappings(ms => ms.Map<Document>(sm => sm
+            //        .AllField(s => s
+            //            .Enabled()
+            //            .Analyzer("nGram_analyzer")
+            //            .SearchAnalyzer("whitespace_analyzer")))));
 
-                InsertDocument();
-            }
+            //    InsertDocument();
+            //}
         }
 
         public static void Main(string[] args)
